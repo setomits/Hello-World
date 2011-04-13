@@ -20,8 +20,8 @@ class MyApp(object):
         o = u'Method: "%s", var1: "%s", var2: "%s"' % (meth, var1, var2)
 
         self.resp.body = o.encode('utf-8', 'ignore')
-
         self.start_response(self.resp.status, self.resp.headerlist)
+
         return self.resp.body
 
 application = MyApp()
